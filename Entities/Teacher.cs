@@ -43,7 +43,7 @@ public class Teacher
     /// Внешний ключ к таблице department
     /// </remarks>
     [Column("department")]
-    public int DepartmentPK { get; set; }
+    public int DepartmentFK { get; set; }
     
     /// <summary>
     /// Кафедра 

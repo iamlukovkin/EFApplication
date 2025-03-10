@@ -9,7 +9,8 @@ public static class ConnectionConfiguration
     public static int Port { get; set; }
     public static string Username { get; set; }
     public static string Password { get; set; }
-    public static string Database { get; set; }
+    public static string ApplicationDatabase { get; set; }
+    public static string AdminDatabase { get; set; }
 
     /// <summary>
     /// Метод формирования строки подключения.
@@ -19,7 +20,7 @@ public static class ConnectionConfiguration
     {
         return $"Server={Host};" +
                $"Port={Port};" +
-               $"Database={Database};" +
+               $"Database={ApplicationDatabase};" +
                $"User Id={Username};" +
                $"Password={Password};";
     }
