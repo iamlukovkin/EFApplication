@@ -27,6 +27,10 @@ public class StudentSessionContext : DbContext
             .HasKey(u => new { u.StudentFK, u.SubjectFK, u.DateOfExam});
         modelBuilder.Entity<StudentsInGroup>()
             .HasKey(u => new { u.StudentFK, u.GroupName });
+        modelBuilder.Entity<Student>()
+                    .HasMany(e => e.Groups)
+                    .WithMany(e => e.Students)
+                    .UsingEntity<StudentsInGroup>();
         modelBuilder.Entity<Department>()
             .HasOne(e => e.Manager)
             .WithOne(e => e.Department)
