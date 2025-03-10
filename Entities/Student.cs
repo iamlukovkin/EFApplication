@@ -1,5 +1,3 @@
-using System.Data.SqlTypes;
-
 namespace Entities;
 
 public class Student
@@ -33,9 +31,9 @@ public class Student
     /// Стипендия
     /// </summary>
     /// <remarks>
-    /// Класс SqlMoney используется в качестве аналога типа данных money в sql.
+    /// Класс decimal используется в качестве аналога типа данных money в sql.
     /// </remarks>
-    public SqlMoney Scholarship { get; set; }
+    public decimal Scholarship { get; set; }
     
     /// <summary>
     /// Возраст. 
