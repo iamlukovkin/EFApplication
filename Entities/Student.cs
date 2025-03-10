@@ -56,4 +56,16 @@ public class Student
     /// </remarks>
     [NotMapped]
     public TimeSpan Age => DateTime.Now - Birthday;
+    
+    /// <summary>
+    /// Экзамены, сдаваемые студентом
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public virtual List<SessionResults> SessionResults { get; set; }
+    
+    /// <summary>
+    /// Группы, в которых числится студент 
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public virtual List<StudentGroup> Groups { get; set; }
 }

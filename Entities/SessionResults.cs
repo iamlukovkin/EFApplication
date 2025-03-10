@@ -15,7 +15,13 @@ public class SessionResults
     /// Внешний ключ к таблице student
     /// </remarks>
     [Column("student")]
-    public int Student { get; set; }
+    public int StudentFK { get; set; }
+    
+    /// <summary>
+    /// Студент
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public Student Student { get; set; }
     
     /// <summary>
     /// Код предмета.
@@ -24,7 +30,13 @@ public class SessionResults
     /// Внешний ключ к таблице subject
     /// </remarks>
     [Column("subject")]
-    public int Subject { get; set; }
+    public int SubjectFK { get; set; }
+    
+    /// <summary>
+    /// Дисциплина
+    /// </summary>
+    /// <remarks>Свойство навишации</remarks>
+    public Subject Subject { get; set; }
     
     /// <summary>
     /// Код преподавателя.
@@ -33,7 +45,13 @@ public class SessionResults
     /// Внешний ключ к таблице teacher
     /// </remarks>
     [Column("teacher")]
-    public int Teacher { get; set; }
+    public int TeacherFK { get; set; }
+    
+    /// <summary>
+    /// Преподаватель
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public Teacher Teacher { get; set; }
     
     /// <summary>
     /// Дата экзамена

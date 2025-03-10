@@ -29,5 +29,17 @@ public class Department
     /// </remarks>
     [Required]
     [Column("manager")] 
-    public int Manager { get; set; }
+    public int ManagerFK { get; set; }
+    
+    /// <summary>
+    /// Преподаватель
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public Teacher Manager { get; set; }
+    
+    /// <summary>
+    /// Группы, привязанные к кафедре 
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public virtual List<StudentGroup> StudentGroups { get; set; }
 }

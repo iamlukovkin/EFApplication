@@ -21,7 +21,13 @@ public class StudentGroup
     /// Внешний ключ к таблице teacher
     /// </remarks>
     [Column("teacher")]
-    public int Teacher { get; set; }
+    public int TeacherFK { get; set; }
+    
+    /// <summary>
+    /// Преподаватель
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public Teacher Teacher { get; set; }
     
     /// <summary>
     /// Код кафедры
@@ -30,5 +36,17 @@ public class StudentGroup
     /// Внешний ключ к таблице department
     /// </remarks>
     [Column("department")]
-    public int Department { get; set; }
+    public int DepartmentFK { get; set; }
+    
+    /// <summary>
+    /// Кафедра
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public Department Department { get; set; }
+    
+    /// <summary>
+    /// Студенты, входящие в состав группы
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public List<Student> Students { get; set; }
 }

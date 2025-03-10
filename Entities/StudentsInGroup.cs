@@ -15,7 +15,13 @@ public class StudentsInGroup
     /// Внешний ключ к таблице student
     /// </remarks>
     [Column("student")]
-    public int Student { get; set; }
+    public int StudentFK { get; set; }
+    
+    /// <summary>
+    /// Студент 
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public Student Student { get; set; } 
     
     /// <summary>
     /// Номер группы
@@ -26,6 +32,12 @@ public class StudentsInGroup
     [MaxLength(6)]
     [Column("group_name")]
     public string GroupName { get; set; }
+    
+    /// <summary>
+    /// Группа
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public StudentGroup StudentGroup { get; set; }
     
     /// <summary>
     /// Дата начала обучения

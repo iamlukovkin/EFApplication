@@ -34,4 +34,10 @@ public class Subject
     [Required]
     [Column("semesters_count")]
     public int SemestersCount { get; set; }
+    
+    /// <summary>
+    /// Результаты по предмету
+    /// </summary>
+    /// <remarks>Свойство навигации</remarks>
+    public virtual List<SessionResults> SessionResults { get; set; }
 }
